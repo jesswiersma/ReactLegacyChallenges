@@ -5,7 +5,7 @@ class SearchIndex extends Component {
   constructor(props) {
     super(props)
    this.state = {
-     things: ['pen', 'marker', 'eraser', 'notebook', 'pencil', 'scissors', 'highlighter', 'stapler', 'paper clip', 'binder', 'hole punch', 'laminator', 'laminating sheets', 'protective sheets', 'index cards'],
+     things: ['pen ',  'marker ',  'eraser ',  'notebook ',  'pencil ',  'scissors ',  'highlighter ',  'stapler ',  'paper clip ',  'binder ',  'hole punch ',  'laminator ',  'laminating sheets ',  'protective sheets ',  'index cards'],
      searchTerm: '',
      results: []
    }

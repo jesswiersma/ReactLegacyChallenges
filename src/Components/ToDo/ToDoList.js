@@ -43,7 +43,6 @@ class ToDoList extends Component {
             tasks: this.state.tasks.filter(tasks => tasks !== this.state.newTasks)
         })
     }
-
    
     render() {
         return (
