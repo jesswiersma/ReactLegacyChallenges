@@ -55,7 +55,9 @@ class ToDoList extends Component {
                     onChange = {(event)=> this.setTask(event)} />
                 
                 <Button onClick = {(event) => this.addTask(event)}>Add Task</Button>
+                <p>To add a task, type the task into the To Do List bar and click the "Add Task" btton</p>
                 <Button onClick = {(event) => this.deleteTask(event)}>Delete Task</Button>
+                <p>To delete a task, type the task you want to delete into the To Do List bar and click on the "Delete Task" button</p>
                 {/* </form> */}
                 <h3>To Do List:</h3>
                 <DisplayToDoList tasks={this.state.tasks}/>
