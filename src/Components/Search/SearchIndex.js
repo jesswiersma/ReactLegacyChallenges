@@ -3,40 +3,39 @@ import {Input} from 'reactstrap';
  
 class SearchIndex extends Component {
   constructor(props) {
-   super(props);
+    super(props)
    this.state = {
-     things: ['pen', 'marker','eraser', 'notebook','pencil', 'scissors','highlighter','stapler','paper clip','binder','hole punch','laminator',
-     'laminating sheets','protective sheets','index cards', ],
+     things: ['pen', 'marker', 'eraser', 'notebook', 'pencil', 'scissors', 'highlighter', 'stapler', 'paper clip', 'binder', 'hole punch', 'laminator', 'laminating sheets', 'protective sheets', 'index cards'],
      searchTerm: '',
      results: []
    }
  }
 
- setSearchTerm = (e) => {
-   this.setState ({
-     searchTerm: e.target.value
-   })
-   //console.log(this.state.searchTerm);
-   this.searchFunction()
+searchTerm = (e) => {
+  this.setState({
+    searchTerm: e.target.value
+  })
+  //console.log(this.state.searchTerm);
+  this.searchFunction()
 }
 
- searchFunction = () => {
-   return 
-    (this.state.things.filter(thing => 
-     thing.includes(this.state.searchTerm)))
-   }
-  
-
+searchFunction = () => {
+  return (
+    (this.state.things.filter(thing =>
+      thing.includes(this.state.searchTerm)))
+  )
+ }
+ 
  render() {
    return (
      <div>
-       <label htmlFor = "search">Search Items</label>
-       <Input type = "text" value = {this.state.setSearchTerm} onChange = {this.setSearchTerm} placeholder='Search Here'/>
+       <label htmlFor = 'search'>Search Items</label>
+       <Input type="text" value = {this.state.searchTerm} onChange = {this.searchTerm} placeholder='Search Here' />
        <h3>Results:</h3>
        <p>{this.searchFunction()}</p>
      </div>
-   );
+   )
  }
 }
- 
+
 export default SearchIndex;
